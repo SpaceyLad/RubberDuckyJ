@@ -1,0 +1,93 @@
+Part 1
+Opens windows search bar, searches for IntelliJ and opens it.
+(Long delay to compensate the loading time. Might need to be adjusted!)
+
+DELAY 500
+CTRL ESC
+DELAY 500
+STRING IntelliJ
+DELAY 500
+ENTER
+DELAY 3700
+
+Part 2
+Creates a new project and does not give it a name. It will be untitled and auto incremented.
+Optional: If you want it to have a name. Use the optional snippet. But beware that it will only work the first time you run it. The second time, the tabs will be unfolded, making the script go into wrong locations!
+
+DOWNARROW
+DELAY 750
+CTRL-SHIFT a
+DELAY 750
+STRING new project
+DELAY 2500
+ENTER
+DELAY 750
+ENTER
+DELAY 750
+ENTER
+DELAY 750
+ENTER
+DELAY 2200
+
+Optional:
+
+DOWNARROW
+DELAY 750
+CTRL-SHIFT a
+DELAY 750
+STRING new project
+DELAY 2500
+ENTER
+DELAY 750
+ENTER
+DELAY 750
+ENTER
+DELAY 750
+STRING <new_project_name>
+ENTER
+DELAY 2200
+
+Part 3
+Now it creates the Main class. it must reach the SRC folder to do this properly. If it doesn't, tweak the script until it does.
+
+ENTER
+DELAY 750
+DOWNARROW
+DELAY 750
+DOWNARROW
+DELAY 750
+CTRL-SHIFT a
+DELAY 750
+STRING java class
+DELAY 750
+ENTER
+DELAY 750
+STRING Main
+DELAY 750
+ENTER
+DELAY 1000
+
+Part 4
+Here it writes the script. You can add more scripts and modify them. But keep them as one liners.
+Note: If you don't know the path in the system, you print the "Virus.exe" to the public user.
+
+CTRL a
+DELAY 750
+STRING import java.io.File;
+ENTER
+STRING import java.io.IOException;
+ENTER
+STRING import java.util.Arrays;
+ENTER
+STRING import java.util.List;
+ENTER
+STRING public class Main { public static void main(String[] args) {examLoop();}
+ENTER
+STRING public static void examLoop(){List<String> list = Arrays.asList("This is", "So fucking", "cool and", "I love", "it so", "much <3");for (String x : list) {System.out.println("|||| " + x + " ||||");}extraFun();}
+ENTER
+STRING public static void extraFun(){try {File myObj = new File("C:\\Users\\Example\\Desktop\\virus.exe");if (myObj.createNewFile()) {} else {}} catch (IOException e) {System.out.println("An error occurred.");e.printStackTrace();}}}
+DELAY 750
+
+Part 5
+Run the code :]
+CTRL-SHIFT F10
